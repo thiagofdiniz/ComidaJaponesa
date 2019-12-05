@@ -20,13 +20,14 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:id="@+id/imagem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:alpha="0.5"
                 android:background="@drawable/greeksalmonsalad" />
 
             <TextView
-                android:id="@+id/ug"
+                android:id="@+id/titulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
@@ -38,10 +39,10 @@
                 />
 
             <TextView
-                android:id="@+id/min"
+                android:id="@+id/minuto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/ug"
+                android:layout_alignBottom="@+id/titulo"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="3dp"
                 android:layout_marginTop="5dp"

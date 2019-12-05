@@ -1,8 +1,10 @@
 package com.example.comidajaponesa;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -14,7 +16,7 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
-
+    Toolbar toolbar;
     GridView gridView;
 
     int[] vPrato = {R.drawable.greeksalmonsalad, R.drawable.pastasalad, R.drawable.beeflazone, R.drawable.ricerool, R.drawable.drinkred, R.drawable.drinks};
@@ -25,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar();
 
         gridView = findViewById(R.id.gridview);
 
@@ -64,5 +71,11 @@ public class MainActivity extends AppCompatActivity {
 
             return view1;
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
     }
 }

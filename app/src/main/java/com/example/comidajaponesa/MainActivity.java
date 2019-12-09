@@ -7,13 +7,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
@@ -43,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
+
             return vPrato.length;
         }
 
@@ -75,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
+        getMenuInflater().inflate(R.menu.mexplore, menu);
         return true;
     }
 }
